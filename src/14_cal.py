@@ -48,4 +48,4 @@ elif len(args) == 3:
     year = int(args[2])
     calendar.prmonth(year, month, w=3, l=1)
 else:
-    print("Too many arguments!")
+    print("Please use format '14_cal.py month [year]'")
