@@ -23,5 +23,10 @@ import sys
 import calendar
 from datetime import datetime
 
-if len(input) == 1:
-    print(input)
+x = input('Enter a month and year: ').split(' ')
+
+if len(x) == 1:
+    x.append('2019')
+print(x)
+
+calendar.prmonth(int(x[1]), int(x[0]), w=3, l=1)
