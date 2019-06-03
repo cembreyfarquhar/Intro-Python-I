@@ -22,3 +22,30 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+# x = input('Enter a month and year: ').split(' ')
+
+# if len(x) == 1:
+#     x.append('2019')
+# print(x)
+
+# calendar.prmonth(int(x[1]), int(x[0]), w=3, l=1)
+
+args = sys.argv
+
+# print(args)
+
+if len(args) == 1:
+    month = datetime.today().month
+    year = datetime.today().year
+    calendar.prmonth(year, month, w=3, l=1)
+elif len(args) == 2:
+    month = int(args[1])
+    year = datetime.today().year
+    calendar.prmonth(year, month, w=3, l=1)
+elif len(args) == 3:
+    month = int(args[1])
+    year = int(args[2])
+    calendar.prmonth(year, month, w=3, l=1)
+else:
+    print("Please use format '14_cal.py month [year]'")
